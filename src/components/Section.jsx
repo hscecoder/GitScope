@@ -2,7 +2,7 @@
 function Section({ title, children, className = "" }) {
   return (
     <div className={"card " + className}>
-      <h2 className="mb-4 text-lg font-semibold text-slate-200">{title}</h2>
+      <h2 className="pixel mb-4 text-base">{title}</h2>
       {children}
     </div>
   );
