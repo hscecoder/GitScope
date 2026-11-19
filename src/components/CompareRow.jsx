@@ -7,11 +7,11 @@ function CompareRow({ row }) {
   const values = [row.a, row.b];
   return (
     <div>
-      <div className="mb-1 text-sm text-slate-400">{row.label}</div>
+      <div className="mb-1 text-neutral-600">{row.label}</div>
       {values.map((value, i) => (
         <div key={i} className="mb-1 flex items-center gap-2" title={formatNumber(value)}>
-          <div className="h-3 rounded-r" style={{ width: (value / max) * 85 + "%", minWidth: 4, background: USER_COLORS[i] }} />
-          <span className={"text-sm " + (value === max && row.a !== row.b ? "font-bold text-white" : "text-slate-300")}>{formatNumber(value)}</span>
+          <div className="h-4 border-2 border-[#1e1e1e]" style={{ width: (value / max) * 85 + "%", minWidth: 4, background: USER_COLORS[i] }} />
+          <span className={"text-sm " + (value === max && row.a !== row.b ? "font-bold" : "text-neutral-600")}>{formatNumber(value)}</span>
         </div>
       ))}
     </div>

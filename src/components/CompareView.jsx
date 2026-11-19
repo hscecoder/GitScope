@@ -13,8 +13,8 @@ function CompareView({ pair }) {
         <CompareUser data={b} index={1} />
       </div>
       <Section title="Head to Head">
-        <div className="mb-4 flex gap-4 text-sm text-slate-300">
-          {[a, b].map((d, i) => <span key={i} className="flex items-center gap-2"><span className="h-3 w-3 rounded-sm" style={{ background: USER_COLORS[i] }} />@{d.user.login}</span>)}
+        <div className="mb-4 flex flex-wrap gap-4">
+          {[a, b].map((d, i) => <span key={i} className="flex items-center gap-2"><span className="h-4 w-4 border-2 border-[#1e1e1e]" style={{ background: USER_COLORS[i] }} />@{d.user.login}</span>)}
         </div>
         <div className="grid gap-4 sm:grid-cols-2">{rows.map((row) => <CompareRow key={row.label} row={row} />)}</div>
       </Section>

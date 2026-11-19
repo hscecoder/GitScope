@@ -15,4 +15,4 @@ export function compareRows(a, b) {
 }
 
 // Colors for the two users
-export const USER_COLORS = ["#3987e5", "#d95926"];
+export const USER_COLORS = ["#2a78d6", "#eb6834"];
