@@ -1,9 +1,25 @@
 @import "tailwindcss";
 
+/* Light, hand-drawn (Excalidraw style) theme with pixel touches */
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Patrick Hand", cursive;
+  font-size: 18px;
+  color: #1e1e1e;
+  background: #fdfcf7 radial-gradient(#d6d3cb 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
-.card {
-  @apply rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg;
+@utility pixel { font-family: "Silkscreen", monospace; }
+@utility sketch { border: 2px solid #1e1e1e; border-radius: 14px 4px 16px 5px / 5px 16px 4px 14px; }
+@utility card { @apply sketch bg-white p-5; box-shadow: 4px 4px 0 #1e1e1e; }
+@utility link { @apply text-[#1971c2] underline decoration-wavy decoration-1 underline-offset-4; }
+@utility input {
+  @apply sketch min-w-0 flex-1 bg-white px-4 py-2 outline-none;
+  &:focus { box-shadow: 3px 3px 0 #a5d8ff; }
+}
+@utility btn {
+  @apply sketch bg-[#a5d8ff] px-5 py-2 font-bold transition;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  &:hover { filter: brightness(0.95); }
+  &:active { transform: translate(3px, 3px); box-shadow: none; }
 }
