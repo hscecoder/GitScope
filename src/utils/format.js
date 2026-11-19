@@ -15,4 +15,4 @@ export function formatDate(date) {
 }
 
 // Chart colors used across the app
-export const COLORS = ["#6366f1", "#22d3ee", "#f472b6", "#facc15", "#34d399", "#fb923c", "#a78bfa", "#f87171"];
+export const COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#0ca30c", "#9085e9", "#e66767"];
