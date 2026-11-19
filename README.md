@@ -44,10 +44,10 @@ Note: in a frontend-only app the token ends up in the browser code, so only use 
 
 | Member | Role |
 |---|---|
-| **Himanshu Soni** | Developer — architecture, GitHub API layer and hooks, all analytics, developer card, comparison |
-| **Ayush Dubey** | UI/UX & Data Visualization — design system, charts, responsive layout and `src/components/` |
-| **Hemant Kumar** | Data Logic & Analytics — calculations in `src/utils/`, error handling, edge cases |
-| **Chandan Kumar** | DevOps, Testing & Documentation — Docker, CI/CD, Vercel, docs, testing |
+| **Himanshu Soni** | Developer: architecture, GitHub API layer and hooks, all analytics, developer card, comparison |
+| **Ayush Dubey** | UI/UX & Data Visualization: design system, charts, responsive layout and `src/components/` |
+| **Hemant Kumar** | Data Logic & Analytics: calculations in `src/utils/`, error handling, edge cases |
+| **Chandan Kumar** | DevOps, Testing & Documentation: Docker, CI/CD, Vercel, docs, testing |
 
 Person A led the project and built the core application; B, C and D each owned one area end to end.
 
