@@ -1,7 +1,7 @@
-// Shared dark tooltip style for all Recharts charts
+// Shared hand-drawn style tooltip for all Recharts charts
 export const tooltipStyle = {
-  contentStyle: { background: "#0f172a", border: "1px solid #334155", borderRadius: 12 },
-  labelStyle: { color: "#e2e8f0" },
-  itemStyle: { color: "#cbd5e1" },
-  cursor: { fill: "rgba(148,163,184,0.08)" },
+  contentStyle: { background: "#fff", border: "2px solid #1e1e1e", borderRadius: 8, boxShadow: "3px 3px 0 #1e1e1e" },
+  labelStyle: { color: "#1e1e1e", fontWeight: "bold" },
+  itemStyle: { color: "#1e1e1e" },
+  cursor: { fill: "rgba(30,30,30,0.06)" },
 };

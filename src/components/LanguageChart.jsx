@@ -10,13 +10,13 @@ function LanguageChart({ repos }) {
   const data = langs.slice(0, 7);
   const rest = langs.slice(7).reduce((sum, l) => sum + l.value, 0);
   if (rest > 0) data.push({ name: "Other", value: rest });
-  if (data.length === 0) return <Section title="Language Distribution"><p className="text-slate-500">No language data.</p></Section>;
+  if (data.length === 0) return <Section title="Language Distribution"><p className="text-neutral-500">No language data.</p></Section>;
   return (
     <Section title="Language Distribution">
       <div className="flex flex-col items-center gap-4 sm:flex-row">
         <ResponsiveContainer width="100%" height={220}>
           <PieChart>
-            <Pie data={data} dataKey="value" nameKey="name" innerRadius={55} outerRadius={90} paddingAngle={2} stroke="#0f172a" strokeWidth={2}>
+            <Pie data={data} dataKey="value" nameKey="name" innerRadius={55} outerRadius={90} paddingAngle={2} stroke="#1e1e1e" strokeWidth={2}>
               {data.map((_, i) => <Cell key={i} fill={COLORS[i]} />)}
             </Pie>
             <Tooltip {...tooltipStyle} />

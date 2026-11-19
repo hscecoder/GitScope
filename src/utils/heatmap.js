@@ -15,4 +15,4 @@ export function toWeeks(days) {
 }
 
 // Green shades from no activity (0) to lots of activity (4)
-export const LEVEL_COLORS = ["#1e293b", "#0e4429", "#006d32", "#26a641", "#39d353"];
+export const LEVEL_COLORS = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"];

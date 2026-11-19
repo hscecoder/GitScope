@@ -6,8 +6,8 @@ import { countEvents } from "../utils/events";
 function ActivityChart({ events }) {
   return (
     <Section title="Activity Breakdown">
-      <p className="mb-2 text-sm text-slate-400">Based on the last {events.length} public events</p>
-      <SimpleBarChart data={countEvents(events)} label="Events" color="#9085e9" />
+      <p className="mb-2 text-neutral-600">Based on the last {events.length} public events</p>
+      <SimpleBarChart data={countEvents(events)} label="Events" color="#6250d6" />
     </Section>
   );
 }
