@@ -11,7 +11,7 @@ function DevCard({ user, repos }) {
   const stats = [
     { label: "Followers", value: user.followers }, { label: "Repos", value: user.public_repos },
     { label: "Stars", value: totals.stars }, { label: "Forks", value: totals.forks },
-    { label: "Following", value: user.following }, { label: lang.name, value: lang.value },
+    { label: "Following", value: user.following }, { label: lang.name + " repos", value: lang.value },
   ];
 
   return (
