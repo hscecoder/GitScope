@@ -1,7 +1,7 @@
 import { eventName } from "./events";
 
 // A short sentence for the activity timeline
-export function describeEvent(e) {
+function sentence(e) {
   const action = e.payload && e.payload.action ? e.payload.action : "";
   if (e.type === "PushEvent") return "Pushed code to";
   if (e.type === "PullRequestEvent") return action + " a pull request in";
@@ -11,4 +11,10 @@ export function describeEvent(e) {
   if (e.type === "WatchEvent") return "Starred";
   if (e.type === "ForkEvent") return "Forked";
   return eventName(e.type) + " on";
+}
+
+// Make the first letter uppercase
+export function describeEvent(e) {
+  const text = sentence(e);
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }

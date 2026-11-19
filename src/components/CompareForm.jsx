@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const inputClass = "flex-1 rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 outline-none focus:border-indigo-500";
+const inputClass = "min-w-0 flex-1 rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 outline-none focus:border-indigo-500";
 
 function CompareForm({ onCompare }) {
   const [nameA, setNameA] = useState("");

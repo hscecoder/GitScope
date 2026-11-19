@@ -8,7 +8,7 @@ function Heatmap({ heatmap }) {
   return (
     <Section title={heatmap.total.lastYear + " contributions in the last year"}>
       <div className="overflow-x-auto pb-2">
-        <div className="flex w-max gap-[3px]">
+        <div className="mx-auto flex w-max gap-[3px]">
           {weeks.map((week, i) => (
             <div key={i} className="flex flex-col gap-[3px]">
               {week.map((day, j) => day ? (

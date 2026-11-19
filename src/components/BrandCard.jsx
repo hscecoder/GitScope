@@ -3,7 +3,7 @@ import { formatNumber } from "../utils/format";
 // The GitScope branded card that gets saved as an image
 function BrandCard({ user, stats, ref }) {
   return (
-    <div ref={ref} className="w-[340px] rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-cyan-500 p-6 text-white">
+    <div ref={ref} className="w-full max-w-[340px] rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-cyan-500 p-6 text-white">
       <div className="flex items-center gap-4">
         <img src={user.avatar_url} crossOrigin="anonymous" alt="" className="h-20 w-20 rounded-full border-4 border-white/70" />
         <div className="min-w-0">
