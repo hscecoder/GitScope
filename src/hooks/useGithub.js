@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { getUser, getRepos, getEvents, getContributions } from "../api/github";
+import { getUser, getEvents, getContributions } from "../api/github";
+import { getRepos } from "../api/repos";
 
 // Loads everything we need for one GitHub user
 export function useGithub() {

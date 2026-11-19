@@ -31,5 +31,11 @@ Then open http://localhost:8080
 - **CI:** GitHub Actions (`.github/workflows/ci.yml`) installs packages, builds the app and builds and tests the Docker image on every push and pull request to `main`.
 - **CD:** Import this repository on [Vercel](https://vercel.com). Vercel detects Vite and redeploys automatically on every push to `main`.
 
-## Note
-Without login, the GitHub API allows 60 requests per hour. If you hit the limit, GitScope shows a message. Wait a while and try again.
+## GitHub API rate limit
+Without a token, GitHub allows **60 requests per hour** per IP. GitScope shows when you can try again.
+
+To raise it to **5,000 per hour**, create a fine-grained token at https://github.com/settings/personal-access-tokens with **no permissions** (public data only), then:
+- **Locally:** create a `.env` file with `VITE_GITHUB_TOKEN=your_token` and restart `npm run dev`.
+- **Vercel:** add `VITE_GITHUB_TOKEN` in Project → Settings → Environment Variables and redeploy.
+
+Note: in a frontend-only app the token ends up in the browser code, so only use a token with no permissions.

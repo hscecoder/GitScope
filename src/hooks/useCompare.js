@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { getUser, getRepos } from "../api/github";
+import { getUser } from "../api/github";
+import { getRepos } from "../api/repos";
 
 // Loads profile + repositories for one user
 async function loadUser(name) {
