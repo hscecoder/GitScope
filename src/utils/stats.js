@@ -1,7 +1,6 @@
 // Add up stars and forks of all repositories
 export function getTotals(repos) {
-  let stars = 0;
-  let forks = 0;
+  let stars = 0, forks = 0;
   repos.forEach((repo) => {
     stars += repo.stargazers_count;
     forks += repo.forks_count;

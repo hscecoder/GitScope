@@ -4,17 +4,14 @@ const BASE = "https://api.github.com/users/";
 async function getJson(url) {
   const res = await fetch(url, { cache: "no-store" });
   if (res.status === 404) throw new Error("User not found. Please check the username.");
-  if (res.status === 403 || res.status === 429) {
-    throw new Error("GitHub API rate limit reached. Please wait a while and try again.");
-  }
+  if (res.status === 403 || res.status === 429) throw new Error("GitHub API rate limit reached. Try again later.");
   if (!res.ok) throw new Error("Something went wrong while talking to GitHub.");
   return res.json();
 }
 
 export const getUser = (name) => getJson(BASE + name);
 export const getEvents = (name) => getJson(BASE + name + "/events/public?per_page=100");
-export const getContributions = (name) =>
-  getJson("https://github-contributions-api.jogruber.de/v4/" + name + "?y=last");
+export const getContributions = (name) => getJson("https://github-contributions-api.jogruber.de/v4/" + name + "?y=last");
 
 // Get all repositories (up to 300) page by page
 export async function getRepos(name) {
