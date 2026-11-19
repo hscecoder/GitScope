@@ -1,11 +1,11 @@
 import { formatNumber } from "../utils/format";
 
-function StatCard({ label, value, icon }) {
+function StatCard({ label, value, icon, color }) {
   return (
-    <div className="card text-center transition hover:-translate-y-1 hover:border-indigo-500/60">
+    <div className="card text-center transition hover:-translate-y-1" style={{ background: color }}>
       <div className="text-2xl">{icon}</div>
-      <div className="mt-1 text-2xl font-bold">{formatNumber(value)}</div>
-      <div className="text-sm text-slate-400">{label}</div>
+      <div className="pixel mt-1 text-2xl">{formatNumber(value)}</div>
+      <div className="text-neutral-700">{label}</div>
     </div>
   );
 }

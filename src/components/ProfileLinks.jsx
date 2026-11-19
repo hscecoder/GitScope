@@ -13,7 +13,7 @@ function ProfileLinks({ user }) {
     <div className="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
       {links.map((link) => (
         <a key={link.label} href={link.url} target="_blank"
-          className="rounded-lg border border-slate-700 px-3 py-1.5 text-sm text-slate-300 hover:border-indigo-500 hover:text-white">
+          className="sketch bg-white px-3 py-0.5 hover:bg-[#ffec99]">
           {link.label} ↗
         </a>
       ))}

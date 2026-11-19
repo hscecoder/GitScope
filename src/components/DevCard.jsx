@@ -18,7 +18,7 @@ function DevCard({ user, repos }) {
     <Section title="Developer Card" className="flex flex-col items-center">
       <BrandCard user={user} stats={stats} ref={cardRef} />
       <button onClick={() => downloadImage(cardRef.current, user.login + "-gitscope.png")}
-        className="mt-4 rounded-xl bg-indigo-500 px-5 py-2 font-semibold hover:bg-indigo-600">⬇ Download PNG</button>
+        className="btn mt-5">⬇ Download PNG</button>
     </Section>
   );
 }

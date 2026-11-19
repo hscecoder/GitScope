@@ -4,12 +4,12 @@ import { getTotals } from "../utils/stats";
 function StatCards({ user, repos }) {
   const totals = getTotals(repos);
   const stats = [
-    { label: "Followers", value: user.followers, icon: "👥" },
-    { label: "Following", value: user.following, icon: "➡️" },
-    { label: "Repositories", value: user.public_repos, icon: "📦" },
-    { label: "Total Stars", value: totals.stars, icon: "⭐" },
-    { label: "Total Forks", value: totals.forks, icon: "🍴" },
-    { label: "Gists", value: user.public_gists, icon: "📝" },
+    { label: "Followers", value: user.followers, icon: "👥", color: "#a5d8ff" },
+    { label: "Following", value: user.following, icon: "➡️", color: "#b2f2bb" },
+    { label: "Repositories", value: user.public_repos, icon: "📦", color: "#ffec99" },
+    { label: "Total Stars", value: totals.stars, icon: "⭐", color: "#ffc9c9" },
+    { label: "Total Forks", value: totals.forks, icon: "🍴", color: "#d0bfff" },
+    { label: "Gists", value: user.public_gists, icon: "📝", color: "#ffd8a8" },
   ];
 
   return (
